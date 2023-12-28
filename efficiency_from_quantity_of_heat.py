@@ -20,7 +20,7 @@ eta = Symbol("efficiency", 1 - (units.temperature / units.temperature))
 temperature_start = Symbol("temperature_start", units.temperature)
 temperature_end = Symbol("temperature_end", units.temperature)
 
-law = Eq(eta, 1 - (temperature_start / temperature_end))
+law = Eq(eta, 1 - (temperature_end / temperature_start))
 
 
 def print_law() -> str:
