@@ -1,4 +1,5 @@
 from sympy import Eq, solve
+from sympy.physics.units import temperature
 from symplyphysics import (
     units,
     Quantity,
@@ -16,9 +17,9 @@ from symplyphysics import (
 ## Q1 is heat taken from the hot tank in Celsius(start)
 ## Q2 is heat given to the cold storage tank in Celsius(end)
 
-eta = Symbol("efficiency", 1 - (units.temperature / units.temperature))
-temperature_start = Symbol("temperature_start", units.temperature)
-temperature_end = Symbol("temperature_end", units.temperature)
+eta = Symbol("efficiency", 1 - (units.degC / units.degC))
+temperature_start = Symbol("temperature_start", units.degC)
+temperature_end = Symbol("temperature_end", units.degC)
 
 law = Eq(eta, 1 - (temperature_end / temperature_start))
 
